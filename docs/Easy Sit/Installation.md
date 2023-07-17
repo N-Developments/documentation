@@ -5,12 +5,17 @@
 <li>Unpack the resource <b><i>n_easysit</i></b> into your desired resources location.</li>
 <li>Insert <b>Ace Permission</b>. <i>Select one, steam or license not both.. depends on your server configuration</i></li>
 
+
+```mdx title="Group"
+add_ace group.admin n_easysit allow
+```
 ```mdx title="Steam Identifier"
 add_ace identifier.steam:xxxxxxxxxxxxx "n_easysit" allow
 ```
 ```mdx title="License Identifier"
 add_ace identifier.license:xxxxxxxxxxxxx "n_easysit" allow
 ```
+
 
 <li>Execute SQL file</li>
 
