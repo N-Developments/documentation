@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## Installation
 
 <li>Download the resource from your <a href="https://keymaster.fivem.net">Keymaster</a>.</li>
@@ -5,7 +8,7 @@
 <li>Unpack the resource <b><i>n_easysit</i></b> into your desired resources location.</li>
 <li>Insert <b>Ace Permission</b>. <i>Select one, steam or license not both.. depends on your server configuration</i></li>
 
-
+<!-- 
 ```mdx title="Group"
 add_ace group.admin n_easysit allow
 ```
@@ -14,8 +17,34 @@ add_ace identifier.steam:xxxxxxxxxxxxx "n_easysit" allow
 ```
 ```mdx title="License Identifier"
 add_ace identifier.license:xxxxxxxxxxxxx "n_easysit" allow
-```
+``` -->
 
+<Tabs className="api-tabs">
+<TabItem value="ace-group" label="Group">
+    <li>Group binding</li>
+
+```jsx title="Bind to your desired group as minimum group grade, eg: mod.. mod, admin, super admin will have the ace perms."
+add_ace group.admin n_easysit allow
+```
+</TabItem>
+
+<TabItem value="ace-steam" label="Steam">
+    <li>Steam Identifier Binding(Not Reccomended)</li>
+
+```jsx title="Not Reccomended."
+add_ace identifier.steam:xxxxxxxxxxxxx "n_easysit" allow
+```
+</TabItem>
+
+<TabItem value="ace-license" label="License">
+    <li>License Identifier Binding(Not Reccomended)</li>
+
+```jsx title="Not Reccomended."
+add_ace identifier.license:xxxxxxxxxxxxx "n_easysit" allow
+```
+</TabItem>
+
+</Tabs>
 
 <li>Execute SQL file</li>
 
